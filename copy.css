@@ -45,13 +45,9 @@ video{
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: cover;
-  min-height: cover;
-	-webkit-size:cover;
+  min-width: 100%;
+  min-height: 100%;
 	
-	-moz-size: cover;
-	-o-size: cover;
-  background-clip-size: cover;
 }
 /*keep*/
 #menu{
