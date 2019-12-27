@@ -47,6 +47,11 @@ video{
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+	-webkit-size:cover;
+	
+	-moz-size: cover;
+	-o-size: cover;
+  background-size: cover;
 }
 /*keep*/
 #menu{
@@ -184,14 +189,6 @@ justify-self: center;
 .an{
 animation-duration: 2s;
 
-}
-html{
-  -webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-  background-size: cover;
-min-height: 100%;
-  min-width: 100%;
 }
 
 
