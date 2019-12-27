@@ -186,7 +186,7 @@ animation-duration: 2s;
 
 }
 html{
-  background-size: auto 100%;
+  background-size: cover;
 min-height: 100%;}
 
 
