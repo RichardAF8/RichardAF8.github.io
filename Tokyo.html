@@ -28,7 +28,7 @@
     </ul>
   </nav>
   <div  id="item3" class="w3-content w3-display-container">
- <iframe class="tv box mySlides mySlides w3-animate-fading"  src="https://www.youtube.com/embed/ogG16ZHPf00?autoplay=1&loop=1&autopause=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="animation-iteration-count: 0.5; width:640px;height: 360px"  ></iframe>
+ <video autoplay muted loop class="tv box mySlides mySlides w3-animate-fading" src="CommercialWork.mp4" style="animation-iteration-count: 0.5; width:640px;height: 360px; ">   </video>
   <img  class="tv  mySlides mySlides w3-animate-fading" src="nordic.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;  ">
   <img  class="tv  mySlides mySlides w3-animate-fading" src="maro.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;    ">
   <img  class="tv  mySlides mySlides w3-animate-fading" src="news.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;  ">
@@ -51,7 +51,7 @@ function carousel() {
   slideIndex++;
   if (slideIndex > x.length) {slideIndex = 1}
   x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 32000); // Change image every 2 seconds
+  setTimeout(carousel, 28000); // Change image every 2 seconds
 }
 var slideIndex = 1;
 showDivs(slideIndex);
