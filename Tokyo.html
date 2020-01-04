@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="copy.css">
   <title></title>
 </head>
-<body class="containerbio">
+<body class="containerbio" onload="carousel()">
   <video autoplay muted loop  id="myVideo">
   <source src="tokyo.mp4" type="video/mp4">
     </video>
@@ -41,7 +41,6 @@
 </div>
  <script>
 var slideIndex = 0;
-carousel();
 function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
