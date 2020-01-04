@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="copy.css">
   <title></title>
 </head>
-<body class="containerbio" onload="carousel()">
+<body class="containerbio" onload="start()">
   <video autoplay muted loop  id="myVideo">
   <source src="tokyo.mp4" type="video/mp4">
     </video>
@@ -41,6 +41,11 @@
 </div>
  <script>
 var slideIndex = 0;
+function start(){
+
+
+carousel();
+
 function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
@@ -50,15 +55,17 @@ function carousel() {
   slideIndex++;
   if (slideIndex > x.length) {slideIndex = 1}
   x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 27000); // Change image every 27 seconds
+  setTimeout(carousel, 27000); // Change image every 2 seconds
 }
-var slideIndex = 1;
+}
+ 
 showDivs(slideIndex);
 
 function plusDivs(n) {
   showDivs(slideIndex += n);
 
 }
+
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
