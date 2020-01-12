@@ -1,81 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet"> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" type="text/css" href="Style.css">
-  <title></title>
-</head>
-<body class="containerbio" onload="start()">
-  <video autoplay muted loop  id="myVideo">
-  <source src="tokyo.mp4" type="video/mp4">
-    </video>
-<!--En|Sp-->
-  <nav>
-    <ul style="list-style-type: none">
-    <a href="about.html" > <li>About</li> </a>
-    <li id="tde">Resume</li>
-    <a href="projects.html" > <li>Portfolio</li> </a>
-    <li id="contact">Contact</li>
-    <li id="menu"></li>
-    <li class="different">Follow</li>
-    <li style="display: inline-block;"><a href="https://github.com/wickeddreamer" target="_blank"><i class="fa fa-github icon"  ></a></i> </li>
-      <li style="display: inline-block;"><a href="https://www.linkedin.com/in/richard-forrester-937829194/" target="_blank"><i class="fa fa-linkedin icon"   ></a></i> </li>
-      <li style="display: inline-block;"><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter icon" ></a></i> </li>
-      <li style="display: inline-block;"><a href="https://www.instagram.com/wickeddreamer/" target="_blank"><i class="fa fa-instagram icon" target="_blank"></a></i> </li>
-    </ul>
-  </nav>
-  <div  id="item3" class="w3-content w3-display-container">
- <video autoplay muted loop class="tv box mySlides mySlides w3-animate-fading" src="CommercialWork.mp4" style="animation-iteration-count: 0.5; width:640px;height: 360px; ">   </video>
-  <img  class="tv  mySlides mySlides w3-animate-fading" src="nordic.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;  ">
-  <img  class="tv  mySlides mySlides w3-animate-fading" src="maro.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;    ">
-  <img  class="tv  mySlides mySlides w3-animate-fading" src="news.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;  ">
-<img  class="tv  mySlides  w3-animate-fading" src="osaka.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;  ">
-  <div class="w3-center w3-display-bottommiddle" style="width:100%">
-    <button  style="color:yellow" class="w3-button  w3-display-bottomleft" onclick="plusDivs(-1)">&#10094;</button>
-  <button style="color:yellow" class="w3-button  w3-display-bottomright" onclick="plusDivs(1)">&#10095;</button> 
-  </div>
-</div>
-</div>
- <script>
-var slideIndex = 0;
-function start(){
-
-
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 27000); // Change image every 2 seconds
-}
-}
- 
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+  </head>
+  <body class="containerbio" onload="start()">
+    <video autoplay muted loop  id="myVideo"> <source src="tokyo.mp4" type="video/mp4"> </video>
+    <!--En|Sp-->
+    <nav >
+			<ul style="list-style-type: none">
+				<a href="about.html" >	<li>About</li> </a>
+				<li id="tde">Resume</li>
+				<a href="projects.html" >	<li>Portfolio</li> </a>
+				<li id="contact">Contact</li>
+				<li id="menu"></li>
+				<li class="different">Follow</li>
+				<li style="display: inline-block;"><a href="https://github.com/wickeddreamer" target="_blank"><i class="fa fa-github icon"></a></i> </li>
+				<li style="display: inline-block;"><a href="https://www.linkedin.com/in/richard-forrester-937829194/" target="_blank"><i class="fa fa-linkedin icon"   ></a></i> </li>
+				<li style="display: inline-block;"><a href="https://twitter.com/Richard75131124" target="_blank"><i class="fa fa-twitter icon"></a></i> </li>
+				<li style="display: inline-block;"><a href="https://www.instagram.com/wickeddreamer/" target="_blank"><i class="fa fa-instagram icon"  ></a></i> </li>
+			</ul>
+		</nav>
+    <div  id="item3" class="w3-content w3-display-container">
+      <video autoplay muted loop class="tv box mySlides mySlides w3-animate-fading" src="CommercialWork.mp4" style="animation-iteration-count: 0.5; width:640px;height: 360px; ">   </video>
+      <img  class="tv  mySlides mySlides w3-animate-fading" src="nordic.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;  ">
+      <img  class="tv  mySlides mySlides w3-animate-fading" src="maro.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;    ">
+      <img  class="tv  mySlides mySlides w3-animate-fading" src="news.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;  ">
+      <img  class="tv  mySlides  w3-animate-fading" src="osaka.png" style="width: 640px; height: 360px; animation-iteration-count: 0.5;  ">
+      <div class="w3-center w3-display-bottommiddle" style="width:100%">
+        <button  style="color:yellow" class="w3-button  w3-display-bottomleft" onclick="plusDivs(-1)">&#10094;</button>
+        <button style="color:yellow" class="w3-button  w3-display-bottomright" onclick="plusDivs(1)">&#10095;</button> 
+      </div> 
+    </div>
+    <script>
+      var slideIndex = 0;
+      function start(){
+        carousel();
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > x.length) {slideIndex = 1}
+          x[slideIndex-1].style.display = "block";
+          setTimeout(carousel, 27000); // Change image every 2 seconds
+          }
+        }
+        showDivs(slideIndex);
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length} ;
+         for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+         }
+         x[slideIndex-1].style.display = "block";
+          }
 </script>
 <script type="text/javascript" src="contact.js"></script>
 </body>
