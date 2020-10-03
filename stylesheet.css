@@ -1,0 +1,325 @@
+
+
+                                                   /*INTRO & ABOUT PAGE*/
+/*Allows background to cover entire page*/
+html body {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+/*Grids the Page*/
+#indexAndAboutGrid {
+  display: grid;
+  grid-template-columns: 200px 350px 630px auto;
+  grid-template-rows: 150px 290px 230px auto;
+   grid-template-areas: ". . demo ." ". menu bio . " ". . con ." ". . . .";
+}
+
+/*Styling and Positioning of the Menu Items*/
+#menu{
+ grid-area: menu;
+}
+
+/*Positions Bio*/
+.bio{
+   grid-area: bio;
+   padding: 30px; 
+}
+/*Positions list of conferences*/
+#text1{
+  grid-area: con;
+  padding: 30px;
+}
+
+/* Styles the icons at the bottom of the menu*/
+.icon{  color: rgba(167, 146, 129, 0.6);
+    list-style-type: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 1%;
+    border: 1px solid rgba(167, 146, 129, 0.4);
+    cursor: pointer;
+  text-align: center;
+}
+/*ROUNDS PROFILE PIC*/
+#circle{
+  border-radius: 50% 50% 50% 50%;
+}
+
+/*Styles the Menu Categories*/
+nav:not(#different){
+  font-family: 'Baskervville', serif;
+  font-size: 46px;
+  width: 290px;
+  text-align: left;
+  align-items: left;
+
+  color: white;
+}
+
+/*Background video*/
+video{
+  opacity: 0.85;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*Creates the line at the bottom of the Menu*/
+#line{
+  border-bottom: 2px solid grey;
+}
+
+/*Animation for Menu Categories*/
+li:not(#different){
+  -webkit-transition: all 0.5s ease-in-out; 
+  color: white; 
+ } 
+
+ /*Styling for Menu Links*/
+ a { text-decoration: none;
+  position: relative;}
+
+
+/*Styling for animate Menu Categories when hovered*/
+ li:hover:not(.different) {
+  transform: scale(1.1);
+  cursor: pointer;
+  text-shadow: 2px 2px 5px  white, 0 0 5px grey,0 -4px 15px silver;
+  left: 0;
+  animation-play-state: paused
+ }
+
+/*LINK ANIMATIONS*/
+.a{
+  text-indent: 50px;
+   animation-delay: 0.5s; 
+   animation-duration: 2s; 
+   color: white;
+}
+
+/*Animates Profile Pic*/
+.faceAnimation{
+  animation-delay:2s; 
+  animation-duration: 3s;  
+  height: 150px; 
+  width:150px; 
+  float: left;  
+  padding: 20px; 
+}
+
+/*Indents Paragraph 2*/
+#p{
+  text-indent: 50px;
+}
+/*Animates Conference List*/
+#text1{
+  animation-delay: 1.5s; 
+  animation-duration: 2s;
+}
+
+                                                   /*PROJECT PAGE*/
+
+/*GRIDS PROJECT PAGE*/
+#projectGrid {
+  display: grid;
+  grid-template-columns: 200px 320px 340px 340px auto;
+  grid-template-rows: 150px 300px 50px auto;
+   grid-template-areas: ". . . . ." ". menu project1 project2 . " ". . title1 title2 ." ". . . . .";
+}
+
+/*Menu Position*/
+#projectMenu{
+ grid-area: menu;
+}
+
+/*Project Display*/
+.tv {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  background: white;
+ border-radius: 50% 50% 50% 50% / 5% 5% 5% 5% ;
+  color: black;
+ box-shadow: 10px 10px rgba(0,0,0,.35);
+  transition: all .4s ease;
+   filter: grayscale(25%);
+   border-width:5px;  
+    border-style:outset;
+    border-top-color: rgb(2, 51, 2);
+    border-bottom-color: black;
+    border-right-color: black;
+    border-left-color: black;
+    top: 70px;
+    justify-self: center;
+}
+
+/*PROJECTS & TITLES*/
+#item{
+  grid-area: project1;
+  height: 200px; 
+  width:300px; 
+  position: relative; 
+  animation-duration: 1.5s; 
+  animation-delay: 1.5s;
+}
+
+#item2{
+  grid-area: project2;
+  height: 200px; 
+  width:300px; 
+  animation-delay:1.5s; 
+  animation-duration: 1.5s;" 
+    }
+
+#title1{
+  position: relative;
+  grid-area: title1;
+  justify-self: center;
+  text-decoration: none;animation-delay: 3s;
+  animation-duration: 2;
+}
+
+#title2{
+   position: relative;
+   grid-area: title2;
+  color:white; animation-delay: 3.5s;
+  animation-duration: 2;
+  justify-self: center;
+
+}
+
+                                                   /*Tokyo DemoReel Page*/
+#demoReel{
+  grid-area: bio;
+  justify-self: center;
+  position: relative;
+  top: -30px;}
+
+.mySlides{
+  animation-iteration-count: 0.5; 
+  width:640px;
+  height: 360px;
+  border-top-color: rgb(82, 6, 18);
+}
+
+
+
+                                                   /*Creates one Column for Phone Display*/
+
+@media only screen and (max-width: 800px)  {
+  /*ABOUT PAGE*/
+  #indexAndAboutGrid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  auto auto auto ;
+    grid-template-areas: "bio" "conf" "menu";
+  }
+  
+  nav:not(#different){
+    text-align: center;
+    /*centers self in grid*/
+    justify-self:center;
+  }
+
+  strong{
+    grid-area: conf;
+  }
+
+  ul{
+    padding: 0px;
+  }
+
+  #text1{
+    padding: 0px;
+    text-align: center;
+    /*centers self in grid*/
+    grid-area: conf;
+  }
+  #bio{
+    grid-area: bio;
+  }
+  #menu{
+    grid-area:menu;
+  }
+
+/*Project Page*/
+  #projectGrid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  300px 50px 300px  50px auto;
+    grid-template-areas: "1" "2" "3" "4" "5";
+  }
+
+  #item{
+    grid-area: 1;
+  }
+
+  #item2{
+    grid-area: 3;
+  }
+
+  #title1{
+    grid-area: 2;
+  }
+
+  #title2{
+    grid-area: 4;
+  }
+  #projectMenu{
+    grid-area: 5;
+  }
+
+  /* Tokyo Project Page*/
+  .mySlides{
+  width:350px;
+  height: 180px;
+  }
+}
+
+/*WHO IS USING A PHONE THIS SMALL IN 2020???*/
+@media only screen and (max-width: 340px) {
+ /*About Page*/
+  #circle{
+    margin-left: 17%;
+  }
+
+  /*Project  Page*/
+  #item{
+    height: 150px; 
+    width:250px; 
+  }
+
+  #item2{
+    height: 150px; 
+    width:250px; 
+  }
+
+  #title1{
+  font-size: 10px;
+  }
+
+  #title2{
+   font-size: 10px;
+  }
+
+  /* Tokyo Project Page*/
+  .mySlides{
+  width:280px;
+  height: 120px;
+  }
+} 
+
+
