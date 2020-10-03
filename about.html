@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Next Best Intern</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- IMPORTS FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet"> 
+     <!-- IMPORTS ANIMATION -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body id="indexAndAboutGrid" onload="slide()"  > <!-- LOADS ANIMATION -->
+
+	<!-- BACKGROUND VIDEO -->
+    <video autoplay muted loop  id="myVideo"> <source src="rain.mp4" type="video/mp4"> </video>
+	 
+	 <!-- NAVIGATION BAR -->			
+  	<nav id="menu">
+  		    <!-- NAVIGATION BAR LINKS -->
+			<ul style="list-style-type: none">
+				<a href="about.html" >	<li>About</li> </a>
+				<a href="RichardF(Resume).pdf" target="_blank"> <li> Resume </li> </a>
+				<a href="projects.html" ><li>Portfolio</li> </a>
+				<a><li id="contact">Contact</li></a>
+				<li id="line"></li>
+				<a><li class="different">Follow</li></a>
+
+				<!-- SOCIAL MEDIA ICONS -->
+				<li style="display: inline-block;"><a href="https://github.com/RichardAF8" target="_blank"><i class="fa fa-github icon"></a></i> </li>
+				<li style="display: inline-block;"><a href="https://www.linkedin.com/in/richard-forrester-937829194/" target="_blank"><i class="fa fa-linkedin icon"   ></a></i> </li>
+				<li style="display: inline-block;"><a href="https://twitter.com/Richard75131124" target="_blank"><i class="fa fa-twitter icon"></a></i> </li>
+				<li style="display: inline-block;"><a href="https://www.instagram.com/wickeddreamer/" target="_blank"><i class="fa fa-instagram icon"  ></a></i> </li>
+			</ul>
+	</nav>
+    <!-- BIO -->
+	<article  class="bio a"> 
+		<img id="circle" src="face.jpg" class="faceAnimation" /> <!-- PROFILE PIC-->
+		Hello, my name is Richard, a Jamaican born resident of the United States. I'm currently pursuing a Master of Science in Computational Linguistics at the University of Washington, Seattle. I built this website to showcase my current and future projects. I welcome the opportunity to connect with recruiters regarding natural language processing, software engineering, and data analytics internships.  
+		<br>
+		<!-- INDENTS NEXT PARAGRAPH -->
+		<p id="p"> As an individual from a unique background, I bring a different set of skills and experiences to the tech industry.  I have interned for the senator Maria Cantwell here in Washington, and have also worked abroad in Barcelona, Spain, at the research institute CREA and as a talent in the entertainment industry in Tokyo, Japan.  Thus, not only am I an exceptional programmer, but a professional well versed in both foreign languages and cultures.
+	</article>
+	
+	<!-- LIST OF CONFERENCES I'VE BEEN TO -->
+    <article id="text1" ><strong style="text-decoration: underline;color: white;"> CONFERENCE </strong> 
+		<ul> 
+			<a href="http://blackistechconference.com/"><li>The Black is Tech 2020</li></a>
+			<a href="https://newyork2020.theleaddeveloper.com/"><li > Lead Dev New York 2020 (Scholarship Recipient) </li> </a>
+			<a href="https://2019.cascadiajs.com/"><li > CascadiaJS 2019 (Scholarship Recipient) </li> </a>
+	    </ul> 
+	</article>
+
+    <!-- IMPORT JAVASCRIPT FOR SENDING EMAIL -->
+    <script type="text/javascript" src="contact.js"></script>
+
+    <!-- CREATES ANIMATIONS -->
+    <script >
+ 			function slide (){
+ 	            //first paragraph 
+				const thing =  document.querySelector('.bio');
+				//Second paragraph
+				const thing2 =  document.querySelector('#text1');
+				//profile picture
+				const thing4 =  document.querySelector('#circle');
+
+				thing.classList.add('animated', 'fadeInRight');
+				thing2.classList.add('animated', 'fadeInUp');
+				thing4.classList.add('animated', 'flipInX');
+			}
+	</script>
+	
+    <!-- THANKS FOR READING MY CODE! -->
+    </body>
+
+</html>
