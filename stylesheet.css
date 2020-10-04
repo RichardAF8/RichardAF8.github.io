@@ -65,10 +65,13 @@ nav:not(#different){
 
 /*Background video*/
 video{
-  opacity: 0.85;
   position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
   overflow: hidden;
-  size: cover;
+  z-index: -1;
 }
 
 /*Creates the line at the bottom of the Menu*/
