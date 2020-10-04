@@ -72,6 +72,7 @@ video{
   left: 0;
   overflow: hidden;
   z-index: -1;
+  size: cover;
 }
 
 /*Creates the line at the bottom of the Menu*/
