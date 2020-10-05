@@ -286,6 +286,9 @@ li:not(#different){
   width:350px;
   height: 180px;
   }
+  video{
+    max-height: 900px;
+  }
 }
 
 /*WHO IS USING A PHONE THIS SMALL IN 2020???*/
