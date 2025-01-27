@@ -13,7 +13,29 @@
 </head>
 <body id="indexAndAboutGrid" >
 <nav id="menu">
-			<video autoplay muted loop id="myVideo"> <source src="Seattle(BV).mp4" type="video/mp4"> </video>
+			<video autoplay muted id="myVideo">
+    <source src="Seattle(BV).mp4" type="video/mp4">
+</video>
+
+<script>
+    const video = document.getElementById('myVideo');
+    
+    // Wait for video metadata to load to get duration
+    video.addEventListener('loadedmetadata', function() {
+        const duration = video.duration;
+        const startTime = duration - 3; // Start 3 seconds from end
+        
+        // Check time while playing
+        video.addEventListener('timeupdate', function() {
+            if (video.currentTime < startTime) {
+                video.currentTime = startTime;
+            }
+            if (video.currentTime >= duration) {
+                video.currentTime = startTime; // Loop back to start point
+            }
+        });
+    });
+</script>
 
 			<ul style="list-style-type: none">
 				<a href="about.html" >	<li>About</li> </a>
