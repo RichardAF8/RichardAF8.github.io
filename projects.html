@@ -1,75 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>More Coming Soon</title>
-	<meta charset="UTF-8">
+    <title>More Coming Soon</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- IMPORTS FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Fredericka+the+Great&display=swap" rel="stylesheet">
-     <!-- IMPORTS ANIMATION -->
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- IMPORTS ANIMATION -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- STYLESHEET -->
+    <style>
+        /* NEW SCROLLABLE SECTION STYLES */
+        .projects-container {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60%;
+            height: 70vh;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            margin-left: auto;
+            width: 80%;
+        }
+    </style>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
-<body id="projectGrid" onload="slide()" > <!-- LOADS ANIMATION -->
-	<!-- BACKGROUND VIDEO -->
-    <video autoplay muted loop  id="myVideo"> <source src="apple.mp4" type="video/mp4"> </video>
-	 
-	 <!-- NAVIGATION BAR -->			
-  	<nav id="projectMenu">
-  		    <!-- NAVIGATION BAR LINKS -->
-			<ul style="list-style-type: none">
-				<a href="about.html" >	<li>About</li> </a>
-				<a href="https://docs.google.com/document/d/1iWkmth7BIZfhLDsfOFCQWvP6iSR3xBtRHfOshBzpBwY/edit?usp=sharing" target="_blank"> <li> Resume </li> </a>
-				<a href="projects.html" ><li>Portfolio</li> </a>
-				<a><li id="contact">Contact</li></a>
-				<li id="line"></li>
-				<a><li class="different">Follow</li></a>
-				<!-- SOCIAL MEDIA ICONS -->
-				<li style="display: inline-block;"><a href="https://github.com/RichardAF8" target="_blank"><i class="fa fa-github icon"></a></i> </li>
-				<li style="display: inline-block;"><a href="https://www.linkedin.com/in/richard-forrester-937829194/" target="_blank"><i class="fa fa-linkedin icon"   ></a></i> </li>
-				<li style="display: inline-block;"><a href="https://twitter.com/Richard75131124" target="_blank"><i class="fa fa-twitter icon"></a></i> </li>
-				<li style="display: inline-block;"><a href="https://www.instagram.com/wickeddreamer/" target="_blank"><i class="fa fa-instagram icon"  ></a></i> </li>
-			</ul>
-	</nav>
-	<!-- PROJECTS & TITLE -->
-		<!--Image & Link-->
-	<div id="item" style="width:100%;text-align:center;">
-		<a href="Tokyo.html" >
-			<img  class="tv animated rotateInDownRight" id="item" src="shoot.jpg"/>
-		</a>
-	</div>
-        <!--Title -->
-    <article class="animated lightSpeedIn"id="title1" style="font-family: 'Fredericka the Great', cursive;
- color: white; font-size: 15px;">Commercial Work ( Tokyo ) </article>
-        <!--Image & Link-->
-    <div id="item2" style="width:100%;text-align:center;">
-     	<a href="https://github.com/RichardAF8/MessengerDesktopApplication-Honors-Project-" target="_blank">
-			<img  class="tv animated rotateInDownLeft "id="item2" src="HonorsApp.png"/> 
-		</a>
-	</div>
-        
-        <!--Title -->
-	<article class="animated lightSpeedIn" id="title2" style="font-family: 'Fredericka the Great', cursive;
-font-size: 15px;"> Messaging Software (Prototype) </article>
-    <!-- IMPORT JAVASCRIPT FOR SENDING EMAIL -->
+<body id="projectGrid" onload="slide()">
+    <!-- BACKGROUND VIDEO -->
+    <video autoplay muted loop id="myVideo"><source src="apple.mp4" type="video/mp4"></video>
+
+    <!-- NAVIGATION BAR -->            
+    <nav id="projectMenu">
+        <!-- (Keep your existing nav code unchanged) -->
+    </nav>
+
+    <!-- SCROLLABLE PROJECTS SECTION -->
+    <div class="projects-container">
+        <!-- Tokyo Project -->
+        <div class="project-card">
+            <a href="Tokyo.html">
+                <img class="tv animated rotateInDownRight" src="shoot.jpg"/>
+            </a>
+            <article class="animated lightSpeedIn" style="font-family: 'Fredericka the Great', cursive; color: white; font-size: 15px;">
+                Commercial Work (Tokyo)
+            </article>
+        </div>
+
+        <!-- Messaging Software -->
+        <div class="project-card">
+            <a href="https://github.com/RichardAF8/MessengerDesktopApplication-Honors-Project-" target="_blank">
+                <img class="tv animated rotateInDownLeft" src="HonorsApp.png"/>
+            </a>
+            <article class="animated lightSpeedIn" style="font-family: 'Fredericka the Great', cursive; color: white; font-size: 15px;">
+                Messaging Software (Prototype)
+            </article>
+        </div>
+
+        <!-- Add more project cards as needed -->
+    </div>
+
+    <!-- REST OF YOUR EXISTING CODE -->
     <script type="text/javascript" src="contact.js"></script>
-    <!-- CREATES ANIMATIONS -->
     <script>
-		function intro(){
-			const element =  document.querySelector('#item');
-			const element2 =  document.querySelector('#item2');
-			const element3 =  document.querySelector('#title1');
-			const element4 =  document.querySelector('#title2');				
-			element.classList.add('animated', 'rotateInDownRight');
-			element2.classList.add('animated', 'rotateInDownLeft');
-			element3.classList.add('animated', 'lightSpeedIn');
-			element4.classList.add('animated', 'lightSpeedIn');
-		}
-	</script>
-	
-    <!-- THANKS FOR READING MY CODE! -->
-    </body>
+        function intro(){
+            const elements = document.querySelectorAll('.project-card');
+            elements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.2}s`;
+                element.classList.add('animated', 'fadeInRight');
+            });
+        }
+    </script>
+</body>
 </html>
