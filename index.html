@@ -15,35 +15,37 @@
 <nav id="menu">
         });
         
-       <video autoplay muted id="myVideo">
+      <video autoplay muted id="myVideo">
     <source src="Seattle(BV).mp4" type="video/mp4">
 </video>
 
 <script>
     const video = document.getElementById('myVideo');
-    let firstPlaythrough = true;
-    
+    let isLooping = false;
+
     video.addEventListener('loadedmetadata', function() {
-        const duration = video.duration;
-        const loopStartTime = duration - 3; // Last 3 seconds
+        // Start normal playback
+        video.play();
         
-        video.addEventListener('ended', function() {
-            if (firstPlaythrough) {
-                // First time video ends, start the eternal loop
-                firstPlaythrough = false;
-                video.currentTime = loopStartTime;
-                video.play();
-                
-                // Set up the eternal loop
-                video.addEventListener('timeupdate', function() {
-                    if (!firstPlaythrough && video.currentTime >= duration) {
-                        video.currentTime = loopStartTime;
-                    }
-                });
+        // Set up loop for last 3 seconds after initial playback
+        video.addEventListener('timeupdate', function() {
+            if (!isLooping && video.currentTime >= video.duration - 3.1) {
+                isLooping = true;
+                video.loop = true;
+                video.currentTime = Math.max(0, video.duration - 3);
             }
         });
     });
+
+    // Backup loop for browsers that need explicit control
+    video.addEventListener('ended', function() {
+        isLooping = true;
+        video.currentTime = Math.max(0, video.duration - 3);
+        video.play();
+    });
 </script>
+
+
 
 			<ul style="list-style-type: none">
 				<a href="about.html" >	<li>About</li> </a>
