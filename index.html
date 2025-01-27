@@ -19,19 +19,26 @@
 
 <script>
     const video = document.getElementById('myVideo');
+    let firstPlaythrough = true;
     
     // Wait for video metadata to load to get duration
     video.addEventListener('loadedmetadata', function() {
         const duration = video.duration;
         const startTime = duration - 3; // Start 3 seconds from end
         
+        // When video ends
+        video.addEventListener('ended', function() {
+            if (firstPlaythrough) {
+                firstPlaythrough = false;
+                video.currentTime = startTime;
+                video.play();
+            }
+        });
+        
         // Check time while playing
         video.addEventListener('timeupdate', function() {
-            if (video.currentTime < startTime) {
-                video.currentTime = startTime;
-            }
-            if (video.currentTime >= duration) {
-                video.currentTime = startTime; // Loop back to start point
+            if (!firstPlaythrough && video.currentTime >= duration) {
+                video.currentTime = startTime; // Loop back to start point of last 3 seconds
             }
         });
     });
