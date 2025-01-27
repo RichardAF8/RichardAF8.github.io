@@ -13,7 +13,9 @@
 </head>
 <body id="indexAndAboutGrid" >
 <nav id="menu">
-			<video autoplay muted id="myVideo">
+        });
+        
+       <video autoplay muted id="myVideo">
     <source src="Seattle(BV).mp4" type="video/mp4">
 </video>
 
@@ -21,24 +23,23 @@
     const video = document.getElementById('myVideo');
     let firstPlaythrough = true;
     
-    // Wait for video metadata to load to get duration
     video.addEventListener('loadedmetadata', function() {
         const duration = video.duration;
-        const startTime = duration - 3; // Start 3 seconds from end
+        const loopStartTime = duration - 3; // Last 3 seconds
         
-        // When video ends
         video.addEventListener('ended', function() {
             if (firstPlaythrough) {
+                // First time video ends, start the eternal loop
                 firstPlaythrough = false;
-                video.currentTime = startTime;
+                video.currentTime = loopStartTime;
                 video.play();
-            }
-        });
-        
-        // Check time while playing
-        video.addEventListener('timeupdate', function() {
-            if (!firstPlaythrough && video.currentTime >= duration) {
-                video.currentTime = startTime; // Loop back to start point of last 3 seconds
+                
+                // Set up the eternal loop
+                video.addEventListener('timeupdate', function() {
+                    if (!firstPlaythrough && video.currentTime >= duration) {
+                        video.currentTime = loopStartTime;
+                    }
+                });
             }
         });
     });
